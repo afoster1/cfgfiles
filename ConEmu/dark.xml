@@ -556,9 +556,9 @@
 			<value name="WndDragKey" type="dword" data="00121101"/>
 			<key name="Tasks" modified="2019-07-06 21:36:35" build="190623">
 				<value name="Count" type="long" data="14"/>
-				<key name="Task1" modified="2019-07-06 21:36:35" build="190623">
+				<key name="Task1" modified="2019-07-06 23:41:18" build="190623">
 					<value name="Name" type="string" data="{Far Manager::Far 3.0 x64}"/>
-					<value name="Flags" type="dword" data="00000004"/>
+					<value name="Flags" type="dword" data="00000005"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=""/>
 					<value name="Active" type="long" data="0"/>
