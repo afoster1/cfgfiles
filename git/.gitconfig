@@ -1,0 +1,48 @@
+[core]
+    whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	quotepath = false
+
+[alias]
+    # Commit staged files and include (fixup) them into the HEAD commit.
+    fixup-staged-previous-commit = !git commit --amend --reuse-message=HEAD --date \"$(date)\"
+    # Commit staged files into a temporary "work in progress" commit.
+    work-in-progress-staged = !git commit -m \"WIP\"
+    # Check whitespace in commit
+    check = !git diff --check
+    # Log
+    l = log --all --graph --pretty='tformat:%C(cyan)%h %C(green)%ad %C(bold yellow)%d %C(reset)%C(white)%s%C(reset) %C(bold white) -%an%C(reset)' -10
+    # Tidy
+    tidy = clean -d -x -f
+    lstidy = clean -d -x -n
+
+    ## 'shortened' commands
+    fixup = !git fixup-staged-previous-commit
+    wip = !git work-in-progress-staged
+
+[user]
+    name = Andrew Foster
+    email = afoster1@gmail.com
+
+# [diff]
+#     tool = vimdiff
+# [difftool]
+#     prompt = false
+# [merge]
+# 	tool = vimdiff
+# 	conflictstyle = diff3
+# [mergetool]
+# 	prompt = false
+
+# Windows Only Below!
+[diff]
+   tool = bc4
+[difftool]
+   prompt = false
+[difftool "bc4"]
+   cmd = \"c:/Program Files/Beyond Compare 4/bcomp.exe\" "$LOCAL" "$REMOTE"
+[merge]
+   tool = bc4
+[mergetool]
+   prompt = false
+[mergetool "bc4"]
+   cmd = \"c:/Program Files/Beyond Compare 4/bcomp.exe\" "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
