@@ -602,8 +602,8 @@
 				<value name="DndRKey" type="hex" data="A2"/>
 				<value name="WndDragKey" type="dword" data="00121101"/>
 			</key>
-			<key name="Tasks" modified="2020-11-15 20:46:10" build="201101">
-				<value name="Count" type="long" data="44"/>
+			<key name="Tasks" modified="2020-11-15 20:56:41" build="201101">
+				<value name="Count" type="long" data="45"/>
 				<key name="Task1" modified="2020-11-15 20:30:47" build="201101">
 					<value name="Name" type="string" data="{Far Manager::Far 3.0 x64}"/>
 					<value name="Flags" type="dword" data="00000005"/>
@@ -974,7 +974,16 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data="%windir%\system32\wsl.exe -cur_console:pm:/mnt"/>
 				</key>
-				<key name="Task42" modified="2020-11-15 20:46:11" build="201101">
+				<key name="Task42" modified="2020-11-15 20:56:41" build="201101">
+					<value name="Name" type="string" data="{Bash::debian}"/>
+					<value name="Flags" type="dword" data="00000004"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="GuiArgs" type="string" data=""/>
+					<value name="Active" type="long" data="0"/>
+					<value name="Count" type="long" data="1"/>
+					<value name="Cmd1" type="string" data="%windir%\system32\wsl.exe -d debian -cur_console:pm:/mnt"/>
+				</key>
+				<key name="Task43" modified="2020-11-15 20:56:41" build="201101">
 					<value name="Name" type="string" data="{SDK::VS 2017 x86 tools prompt}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -983,7 +992,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='cmd /k ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat"" x86 -new_console:t:"VS 2017" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll"'/>
 				</key>
-				<key name="Task43" modified="2020-11-15 20:46:11" build="201101">
+				<key name="Task44" modified="2020-11-15 20:56:41" build="201101">
 					<value name="Name" type="string" data="{SDK::VS 2017 x64 tools prompt}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -992,7 +1001,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='cmd /k ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat"" x64 -new_console:t:"VS 2017" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll"'/>
 				</key>
-				<key name="Task44" modified="2020-11-15 20:46:11" build="201101">
+				<key name="Task45" modified="2020-11-15 20:56:41" build="201101">
 					<value name="Name" type="string" data="{Tools::Chocolatey (Admin)}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
