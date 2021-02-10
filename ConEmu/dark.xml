@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2021-01-14 14:16:25" build="201101">
+		<key name=".Vanilla" modified="2021-02-10 11:55:40" build="210112">
 			<value name="Language" type="string" data="en"/>
 			<value name="StartType" type="hex" data="00"/>
 			<value name="CmdLine" type="string" data=""/>
@@ -602,8 +602,8 @@
 				<value name="DndRKey" type="hex" data="A2"/>
 				<value name="WndDragKey" type="dword" data="00121101"/>
 			</key>
-			<key name="Tasks" modified="2020-11-15 20:56:41" build="201101">
-				<value name="Count" type="long" data="45"/>
+			<key name="Tasks" modified="2021-02-10 11:54:57" build="210112">
+				<value name="Count" type="long" data="47"/>
 				<key name="Task1" modified="2020-11-15 20:30:47" build="201101">
 					<value name="Name" type="string" data="{Far Manager::Far 3.0 x64}"/>
 					<value name="Flags" type="dword" data="00000005"/>
@@ -622,7 +622,25 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='set "FARHOME=" &amp; "far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins"'/>
 				</key>
-				<key name="Task3" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task3" modified="2021-02-10 11:54:57" build="210112">
+					<value name="Name" type="string" data="{Visual Studio::VS16 x86 Dev}"/>
+					<value name="Flags" type="dword" data="00000004"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="GuiArgs" type="string" data=""/>
+					<value name="Active" type="long" data="0"/>
+					<value name="Count" type="long" data="1"/>
+					<value name="Cmd1" type="string" data='-new_console:t:"VS16 x86" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\Tools\VsDevCmd.bat" &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
+				</key>
+				<key name="Task4" modified="2021-02-10 11:54:57" build="210112">
+					<value name="Name" type="string" data="{Visual Studio::VS16 x64 Native}"/>
+					<value name="Flags" type="dword" data="00000004"/>
+					<value name="Hotkey" type="dword" data="00000000"/>
+					<value name="GuiArgs" type="string" data=""/>
+					<value name="Active" type="long" data="0"/>
+					<value name="Count" type="long" data="1"/>
+					<value name="Cmd1" type="string" data='-new_console:t:"VS16 x64" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\Build\vcvars64.bat" &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
+				</key>
+				<key name="Task5" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Visual Studio::VS15 x86}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -631,7 +649,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"VS15 x86" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvarsall.bat" x86 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task4" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task6" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Visual Studio::VS15 x64}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -640,7 +658,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"VS15 x64" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvarsall.bat" x64 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task5" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task7" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Visual Studio::VS14 x64}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -649,7 +667,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"VS14 x64" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat" &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task6" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task8" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Visual Studio::VS14 x86 Native}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -658,7 +676,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"VS14 x64" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x86 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task7" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task9" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Visual Studio::VS14 x64 Native}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -667,7 +685,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"VS14 x64" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task8" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task10" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Visual Studio::VS12 x86}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -676,7 +694,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"VS12 x86" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" x86 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task9" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task11" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Visual Studio::VS12 x64}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -685,7 +703,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"VS12 x64" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" x64 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task10" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task12" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Visual Studio::VS11 x86}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -694,7 +712,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"VS11 x86" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio 11.0\VC\vcvarsall.bat" x86 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task11" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task13" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Visual Studio::VS11 x64}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -703,7 +721,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"VS11 x64" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio 11.0\VC\vcvarsall.bat" x64 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task12" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task14" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Visual Studio::VS10 x86}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -712,7 +730,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"VS10 x86" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat" x86 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task13" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task15" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Visual Studio::VS10 x64}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -721,7 +739,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"VS10 x64" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat" x64 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task14" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task16" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Visual Studio::VS9 x86}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -730,7 +748,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"VS9 x86" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio 9.0\VC\vcvarsall.bat" x86 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task15" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task17" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Visual Studio CE::VS15 x86}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -739,7 +757,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"VS15 x86" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" x86 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task16" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task18" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Visual Studio CE::VS15 x64}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -748,7 +766,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"VS15 x64" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" x64 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task17" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task19" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Intel::2020}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -757,7 +775,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"Intel 2020,64,VS2017" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""%ConEmuDrive%\Program Files (x86)\IntelSWTools\parallel_studio_xe_2020\bin\psxevars.bat" intel64 vs2017 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task18" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task20" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Init::cppdev86}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -766,7 +784,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"cppdev86" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""c:\sandbox\binfiles\init.bat" cppdev86 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task19" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task21" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Init::cppdev64}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -775,7 +793,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"cppdev64" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""c:\sandbox\binfiles\init.bat" cppdev64 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task20" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task22" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Init::python27 x86}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -784,7 +802,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"python27 x86" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""c:\sandbox\binfiles\init.bat" python27_86 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task21" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task23" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Init::python37 x86}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -793,7 +811,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"python37 x86" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""c:\sandbox\binfiles\init.bat" python37_86 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task22" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task24" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Init::python37 x64}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -802,7 +820,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"python37 x64" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""c:\sandbox\binfiles\init.bat" python37_64 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task23" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task25" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Init::vs15ce x86}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -811,7 +829,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"vs15ce x86" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""c:\sandbox\binfiles\init.bat" vs15ce &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task24" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task26" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Init::gpg}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -820,7 +838,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"gpg" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""c:\sandbox\binfiles\init.bat" gpg &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task25" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task27" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Init::winsdk100}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -829,7 +847,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"winsdk100" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""c:\sandbox\binfiles\init.bat" winsdk100 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task26" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task28" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Init::winsdk100_64}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -838,7 +856,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"winsdk100_64" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38" cmd /c ""c:\sandbox\binfiles\init.bat" winsdk100_64 &amp;&amp; set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins""'/>
 				</key>
-				<key name="Task27" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task29" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Shells::mintty\ssh}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -847,7 +865,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='-new_console:t:"chorlton" -new_console:""c:\Program Files\Git\usr\bin\mintty.exe" -c %HOMEPATH%\.minttyrc -e /bin/ssh user@192.168.1.5 -p 22"'/>
 				</key>
-				<key name="Task28" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task30" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Shells::cmd}"/>
 					<value name="Flags" type="dword" data="00000002"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -856,7 +874,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='cmd.exe /k "%ConEmuBaseDir%\CmdInit.cmd"'/>
 				</key>
-				<key name="Task29" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task31" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Shells::cmd (Admin)}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -865,7 +883,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='cmd.exe /k "%ConEmuBaseDir%\CmdInit.cmd" -new_console:a'/>
 				</key>
-				<key name="Task30" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task32" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Shells::cmd-32}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -874,7 +892,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='"%windir%\syswow64\cmd.exe" /k "%ConEmuBaseDir%\CmdInit.cmd"'/>
 				</key>
-				<key name="Task31" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task33" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Shells::cmd 64/32}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -884,7 +902,7 @@
 					<value name="Cmd1" type="string" data='&gt; "%windir%\system32\cmd.exe" /k ""%ConEmuBaseDir%\CmdInit.cmd" &amp; echo This is Native cmd.exe"'/>
 					<value name="Cmd2" type="string" data='"%windir%\syswow64\cmd.exe" /k ""%ConEmuBaseDir%\CmdInit.cmd" &amp; echo This is 32 bit cmd.exe -new_console:s50V"'/>
 				</key>
-				<key name="Task32" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task34" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Shells::PowerShell}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -893,7 +911,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data="powershell.exe"/>
 				</key>
-				<key name="Task33" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task35" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Shells::PowerShell (Admin)}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -902,7 +920,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data="powershell.exe -new_console:a"/>
 				</key>
-				<key name="Task34" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task36" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Bash::Git bash}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -911,7 +929,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='set "PATH=%ConEmuDir%\..\Git\usr\bin;%PATH%" &amp; %ConEmuDir%\..\Git\git-cmd.exe --no-cd --command=%ConEmuBaseDirShort%\conemu-msys2-64.exe /usr/bin/bash.exe -l -i -new_console:p'/>
 				</key>
-				<key name="Task35" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task37" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Bash::Msys2-64}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -920,7 +938,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='set CHERE_INVOKING=1 &amp; set "PATH=%ConEmuDrive%\msys64\usr\bin;%PATH%" &amp; %ConEmuBaseDirShort%\conemu-msys2-64.exe -new_console:p %ConEmuDrive%\msys64\usr\bin\bash.exe --login -i -new_console:C:"%ConEmuDrive%\msys64\msys2.ico"'/>
 				</key>
-				<key name="Task36" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task38" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Helper::Show ANSI colors}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -929,7 +947,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='cmd.exe /k type "%ConEmuBaseDir%\Addons\AnsiColors16t.ans" -cur_console:n'/>
 				</key>
-				<key name="Task37" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task39" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{SDK::VS 15.0 x86 tools prompt}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -938,7 +956,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='cmd /k ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat"" x86 -new_console:t:"VS 15.0" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38"'/>
 				</key>
-				<key name="Task38" modified="2020-11-15 20:30:47" build="201101">
+				<key name="Task40" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{SDK::VS 15.0 x64 tools prompt}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -947,7 +965,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='cmd /k ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat"" x64 -new_console:t:"VS 15.0" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll,38"'/>
 				</key>
-				<key name="Task39" modified="2020-11-15 20:46:11" build="201101">
+				<key name="Task41" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Far Manager::Far 3.0.5400 x64 (1)}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -956,7 +974,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='set "FARHOME=" &amp; "far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins"'/>
 				</key>
-				<key name="Task40" modified="2020-11-15 20:46:11" build="201101">
+				<key name="Task42" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Far Manager::Far 3.0.5400 x64 (2)}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -965,7 +983,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='set "FARHOME=" &amp; "%ConEmuDir%\..\Far Manager\Far.exe" /w /p"%ConEmuDir%\Plugins\ConEmu;%FARHOME%\Plugins;%FARPROFILE%\Plugins"'/>
 				</key>
-				<key name="Task41" modified="2020-11-15 20:46:11" build="201101">
+				<key name="Task43" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Bash::bash}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -974,7 +992,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data="%windir%\system32\wsl.exe -cur_console:pm:/mnt"/>
 				</key>
-				<key name="Task42" modified="2020-11-15 20:56:41" build="201101">
+				<key name="Task44" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Bash::debian}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -983,7 +1001,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data="%windir%\system32\wsl.exe -d debian -cur_console:pm:/mnt"/>
 				</key>
-				<key name="Task43" modified="2020-11-15 20:56:41" build="201101">
+				<key name="Task45" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{SDK::VS 2017 x86 tools prompt}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -992,7 +1010,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='cmd /k ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat"" x86 -new_console:t:"VS 2017" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll"'/>
 				</key>
-				<key name="Task44" modified="2020-11-15 20:56:41" build="201101">
+				<key name="Task46" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{SDK::VS 2017 x64 tools prompt}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -1001,7 +1019,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='cmd /k ""%ConEmuDrive%\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat"" x64 -new_console:t:"VS 2017" -new_console:C:"%CommonProgramFiles(x86)%\microsoft shared\MSEnv\VSFileHandler.dll"'/>
 				</key>
-				<key name="Task45" modified="2020-11-15 20:56:41" build="201101">
+				<key name="Task47" modified="2021-02-10 11:54:57" build="210112">
 					<value name="Name" type="string" data="{Tools::Chocolatey (Admin)}"/>
 					<value name="Flags" type="dword" data="00000004"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
