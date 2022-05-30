@@ -79,45 +79,33 @@
         "list": 
         [
             {
-                "guid": "{cbe4cf8c-87d5-5f8a-a142-1006738343f3}",
-                "hidden": false,
-                "name": "Developer Command Prompt for VS 2022",
-                "source": "Windows.Terminal.VisualStudio",
-            },
-            {
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6102}",
                 "hidden": false,
-                "name": "Command Prompt"
+                "name": "Command Prompt - Dark"
+            },
+            {
+                "colorScheme": "Solarized Light",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6103}",
+                "hidden": false,
+                "name": "Command Prompt - Light"
             },
             {
                 "backgroundImageOpacity": 0.10000000000000001,
                 "colorScheme": "Vintage",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
-                "name": "Command Prompt - Dark"
+                "name": "Command Prompt - Black"
+            },
+            {
+                "guid": "{cbe4cf8c-87d5-5f8a-a142-1006738343f3}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio",
             },
             {
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell"
-            },
-            {
-                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
-                "hidden": false,
-                "name": "Debian",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": false,
-                "name": "Azure Cloud Shell",
-                "source": "Windows.Terminal.Azure"
-            },
-            {
-                "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
-                "hidden": true,
-                "name": "Visual Studio Debug Console",
-                "source": "VSDebugConsole"
             }
         ]
     },
