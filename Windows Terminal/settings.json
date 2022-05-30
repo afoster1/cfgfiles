@@ -62,7 +62,7 @@
     {
         "defaults": 
         {
-            "backgroundImage": "%HOMEDRIVE%%HOMEPATH%\\Pictures\\Unknown Pleasures Transparent.png",
+            "backgroundImage": "%HOMEDRIVE%%HOMEPATH%\\Unknown Pleasures Transparent.png",
             "backgroundImageAlignment": "center",
             "backgroundImageOpacity": 0.050000000000000003,
             "backgroundImageStretchMode": "none",
