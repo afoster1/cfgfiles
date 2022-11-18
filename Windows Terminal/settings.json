@@ -12,10 +12,6 @@
             "keys": "alt+shift+f"
         },
         {
-            "command": "find",
-            "keys": "ctrl+shift+f"
-        },
-        {
             "command": 
             {
                 "action": "splitPane",
@@ -23,6 +19,18 @@
                 "splitMode": "duplicate"
             },
             "keys": "alt+shift+d"
+        },
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
         },
         {
             "command": 
@@ -33,24 +41,59 @@
             "keys": "alt+shift+v"
         },
         {
-            "command": "openTabRenamer",
-            "keys": "alt+shift+r"
+            "command": "find",
+            "keys": "ctrl+shift+f"
         },
         {
-            "command": "paste",
-            "keys": "ctrl+v"
+            "command": 
+            {
+                "action": "newTab",
+                "index": 1
+            }
+        },
+        {
+            "command": "openTabRenamer",
+            "keys": "alt+shift+r"
         },
         {
             "command": "togglePaneZoom",
             "keys": "alt+shift+z"
         },
         {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+c"
+            "command": "unbound",
+            "keys": "ctrl+shift+1"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+2"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+3"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+4"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+5"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+6"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+7"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+8"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+shift+9"
         }
     ],
     "alwaysShowTabs": false,
@@ -100,7 +143,7 @@
                 "guid": "{cbe4cf8c-87d5-5f8a-a142-1006738343f3}",
                 "hidden": false,
                 "name": "Developer Command Prompt for VS 2022",
-                "source": "Windows.Terminal.VisualStudio",
+                "source": "Windows.Terminal.VisualStudio"
             },
             {
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
