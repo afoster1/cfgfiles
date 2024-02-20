@@ -1,6 +1,10 @@
 [core]
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	quotepath = false
+    quotepath = false
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
 
 [alias]
     # Commit staged files and include (fixup) them into the HEAD commit.
@@ -22,6 +26,49 @@
 [user]
     name = Andrew Foster
     email = afoster1@gmail.com
+
+# Check config for delta using "delta --show-config"
+[delta]
+    navigate = true
+    features = unobtrusive-line-numbers decorations dark
+    side-by-side = false
+    syntax-theme = "Solarized (dark)"
+[delta "unobtrusive-line-numbers"]
+    line-numbers = true
+    line-numbers-minus-style = red
+    line-numbers-plus-style = green
+    line-numbers-left-format = "{nm:>4}┊"
+    line-numbers-right-format = "{np:>4}┊"
+    line-numbers-left-style = white
+    line-numbers-right-style = white
+[delta "decorations"]
+    commit-decoration-style = white ol
+    commit-style = raw
+    file-style = bold cyan
+    file-modified-label = "file:"
+    file-decoration-style = none
+    hunk-header-style = white dim
+    hunk-header-decoration-style = white ol
+    hunk-header-file-style = white dim
+    hunk-header-line-number-style = white bold
+    hunk-header-style = file line-number white dim
+    hunk-label = "hunk:"
+    line-numbers-zero-style = white dim
+[delta "dark"]
+    light = false
+    minus-style = red auto
+    minus-emph-style = black red
+    minus-non-emph-style = red auto
+    plus-style = syntax auto
+    plus-emph-style = auto green
+    plus-non-emph-style = syntax auto
+    plus-empty-line-marker-style = green auto
+
+[merge]
+    conflictStyle = diff3
+
+[diff]
+    colorMoved = default
 
 # [diff]
 #     tool = vimdiff
