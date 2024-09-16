@@ -14,6 +14,7 @@
     # Check whitespace in commit
     check = !git diff --check
     # Log
+    adog = log --all --decorate --oneline --graph
     l = log --all --graph --pretty='tformat:%C(cyan)%h %C(green)%ad %C(bold yellow)%d %C(reset)%C(white)%s%C(reset) %C(bold white) -%an%C(reset)' -10
     # Tidy
     tidy = clean -d -x -f
@@ -86,10 +87,10 @@
 [difftool]
    prompt = false
 [difftool "bc4"]
-   cmd = \"c:/Program Files/Beyond Compare 4/bcomp.exe\" "$LOCAL" "$REMOTE"
+   cmd = \"c:/Program Files/Beyond Compare 5/bcomp.exe\" "$LOCAL" "$REMOTE"
 [merge]
    tool = bc4
 [mergetool]
    prompt = false
 [mergetool "bc4"]
-   cmd = \"c:/Program Files/Beyond Compare 4/bcomp.exe\" "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+   cmd = \"c:/Program Files/Beyond Compare 5/bcomp.exe\" "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
