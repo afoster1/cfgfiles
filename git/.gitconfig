@@ -85,14 +85,15 @@
 
 # Windows Only Below!
 [diff]
-   tool = bc4
+   tool = bc5
 [difftool]
    prompt = false
-[difftool "bc4"]
+[difftool "bc5"]
    cmd = \"c:/Program Files/Beyond Compare 5/bcomp.exe\" "$LOCAL" "$REMOTE"
 [merge]
    tool = bc4
 [mergetool]
    prompt = false
-[mergetool "bc4"]
+[mergetool "bc5"]
    cmd = \"c:/Program Files/Beyond Compare 5/bcomp.exe\" "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+   trustExitCode = true
