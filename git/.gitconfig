@@ -15,7 +15,9 @@
     check = !git diff --check
     # Log
     adog = log --all --decorate --oneline --graph
-    l = log --all --graph --pretty='tformat:%C(cyan)%h %C(green)%ad %C(bold yellow)%d %C(reset)%C(white)%s%C(reset) %C(bold white) -%an%C(reset)' -10
+    dog = log --first-parent --decorate --oneline --graph
+    l = log --first-parent --date=short --graph --pretty='tformat:%C(cyan)%h %C(green)%ad %C(bold yellow)%d %C(reset)%C(white)%s%C(reset) %C(bold white) -%an%C(reset)' -10
+    al = log --all --date=short --graph --pretty='tformat:%C(cyan)%h %C(green)%ad %C(bold yellow)%d %C(reset)%C(white)%s%C(reset) %C(bold white) -%an%C(reset)' -10
     # Tidy
     tidy = clean -d -x -f
     lstidy = clean -d -x -n
