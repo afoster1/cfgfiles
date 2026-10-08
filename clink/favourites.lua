@@ -163,9 +163,9 @@ local function ensure_list(order, lists, name)
     end
 end
 
-local function add_current_to_favourites(index)
-    local dir = get_current_dir()
-    if not dir or dir == "" then
+local function add_value_to_favourites(index, value)
+    local text = trim(value)
+    if text == "" then
         return false
     end
 
@@ -182,13 +182,32 @@ local function add_current_to_favourites(index)
     ensure_list(order, lists, name)
 
     for _, existing in ipairs(lists[name]) do
-        if existing == dir then
+        if existing == text then
             return true
         end
     end
 
-    table.insert(lists[name], dir)
+    table.insert(lists[name], text)
     return save_lists(order, lists)
+end
+
+local function add_cmd_to_favourites(index, rl_buffer)
+    local input = ""
+
+    if rl_buffer then
+        input = rl_buffer:getbuffer() or ""
+    end
+
+    return add_value_to_favourites(index, input)
+end
+
+local function add_current_to_favourites(index)
+    local dir = get_current_dir()
+    if not dir or dir == "" then
+        return false
+    end
+
+    return add_value_to_favourites(index, dir)
 end
 
 local function show_list_by_index(index, rl_buffer)
@@ -351,7 +370,7 @@ local binding_defs = {
         end,
     },
 
-    -- Alt shift 1-9
+    -- Left alt+Shift+1-9
     {
         name = 'favourites.add_list_1',
         default_key = [[\e!]],
@@ -433,7 +452,91 @@ local binding_defs = {
             return add_current_to_favourites(9)
         end,
     },
+
+    -- Right Alt+Shift+1 to 9
+    {
+        name = 'favourites.add_cmd_list_1',
+        default_key = [[\e[27;8;49~]],
+        short_description = 'Hotkey to add command to favourites list 1',
+        long_description = [[Hotkey to add command to favourites list 1]],
+        handler = function(rl_buffer)
+            return add_cmd_to_favourites(1, rl_buffer)
+        end,
+    },
+    {
+        name = 'favourites.add_cmd_list_2',
+        default_key = [[\e\C-@]],
+        short_description = 'Hotkey to add command to favourites list 2',
+        long_description = [[Hotkey to add command to favourites list 2]],
+        handler = function(rl_buffer)
+            return add_cmd_to_favourites(2, rl_buffer)
+        end,
+    },
+    {
+        name = 'favourites.add_cmd_list_3',
+        default_key = [[\e[27;8;51~]],
+        short_description = 'Hotkey to add command to favourites list 3',
+        long_description = [[Hotkey to add command to favourites list 3]],
+        handler = function(rl_buffer)
+            return add_cmd_to_favourites(3, rl_buffer)
+        end,
+    },
+    {
+        name = 'favourites.add_cmd_list_4',
+        default_key = [[\e[27;8;52~]],
+        short_description = 'Hotkey to add command to favourites list 4',
+        long_description = [[Hotkey to add command to favourites list 4]],
+        handler = function(rl_buffer)
+            return add_cmd_to_favourites(4, rl_buffer)
+        end,
+    },
+    {
+        name = 'favourites.add_cmd_list_5',
+        default_key = [[\e[27;8;53~]],
+        short_description = 'Hotkey to add command to favourites list 5',
+        long_description = [[Hotkey to add command to favourites list 5]],
+        handler = function(rl_buffer)
+            return add_cmd_to_favourites(5, rl_buffer)
+        end,
+    },
+    {
+        name = 'favourites.add_cmd_list_6',
+        default_key = [[\e\C-^]],
+        short_description = 'Hotkey to add command to favourites list 6',
+        long_description = [[Hotkey to add command to favourites list 6]],
+        handler = function(rl_buffer)
+            return add_cmd_to_favourites(6, rl_buffer)
+        end,
+    },
+    {
+        name = 'favourites.add_cmd_list_7',
+        default_key = [[\e[27;8;55~]],
+        short_description = 'Hotkey to add command to favourites list 7',
+        long_description = [[Hotkey to add command to favourites list 7]],
+        handler = function(rl_buffer)
+            return add_cmd_to_favourites(7, rl_buffer)
+        end,
+    },
+    {
+        name = 'favourites.add_cmd_list_8',
+        default_key = [[\e[27;8;56~]],
+        short_description = 'Hotkey to add command to favourites list 8',
+        long_description = [[Hotkey to add command to favourites list 8]],
+        handler = function(rl_buffer)
+            return add_cmd_to_favourites(8, rl_buffer)
+        end,
+    },
+    {
+        name = 'favourites.add_cmd_list_9',
+        default_key = [[\e[27;8;57~]],
+        short_description = 'Hotkey to add command to favourites list 9',
+        long_description = [[Hotkey to add command to favourites list 9]],
+        handler = function(rl_buffer)
+            return add_cmd_to_favourites(9, rl_buffer)
+        end,
+    }
 }
+
 
 -- Bind the keys
 for _, def in ipairs(binding_defs) do
