@@ -210,6 +210,171 @@ local function add_current_to_favourites(index)
     return add_value_to_favourites(index, dir)
 end
 
+local function get_all_favourite_values()
+    local order, lists = list_names_and_values()
+    local values = {}
+
+    for _, name in ipairs(order) do
+        local list = lists[name] or {}
+        for _, value in ipairs(list) do
+            if type(value) == "string" and trim(value) ~= "" then
+                table.insert(values, value)
+            end
+        end
+    end
+
+    return values
+end
+
+local current_input_word = ""
+
+local function get_current_input_word(line)
+    local text = line or ""
+    local word = text:match("([^%s]+)$") or ""
+    if word == "" then
+        return ""
+    end
+    return word
+end
+
+local function update_current_input_word(line)
+    current_input_word = get_current_input_word(line)
+end
+
+if clink.oninputlinechanged then
+    clink.oninputlinechanged(update_current_input_word)
+end
+
+local function favourite_matches(value, prefix)
+    if type(value) ~= "string" then
+        return false
+    end
+
+    local pattern = trim(prefix or "")
+    if pattern == "" then
+        return true
+    end
+
+    return value:lower():find(pattern:lower(), 1, true) ~= nil
+end
+
+local function favourites_completion_matches(line_state)
+    local current = ""
+    if line_state and line_state.getendword then
+        current = line_state:getendword() or ""
+    elseif current_input_word and current_input_word ~= "" then
+        current = current_input_word
+    end
+
+    local prefix = trim(current):lower()
+    local matches = {}
+
+    for _, value in ipairs(get_all_favourite_values()) do
+        if favourite_matches(value, prefix) then
+            table.insert(matches, value)
+        end
+    end
+
+    return matches
+end
+
+local function add_favourite_matches(match_builder, word)
+    local prefix = trim(word or current_input_word or "")
+    local count = 0
+    for _, value in ipairs(get_all_favourite_values()) do
+        if favourite_matches(value, prefix) then
+            if match_builder then
+                match_builder:addmatch(value, "word")
+            else
+                clink.add_match(value)
+            end
+            count = count + 1
+        end
+    end
+    return count > 0
+end
+
+local favourites_generator = clink.generator(100)
+function favourites_generator:generate(line_state, match_builder)
+    if not line_state then
+        return false
+    end
+
+    local word = line_state:getendword() or current_input_word or ""
+    return add_favourite_matches(match_builder, word)
+end
+
+if clink.onfiltermatches then
+    clink.onfiltermatches(function(matches)
+        local prefix = trim(current_input_word or ""):lower()
+        if not matches or #matches == 0 then
+            if prefix == "" then
+                return matches
+            end
+            matches = {}
+        end
+
+        local seen = {}
+        for _, match in ipairs(matches) do
+            local key = type(match) == "table" and (match.match or "") or tostring(match)
+            seen[key] = true
+        end
+
+        for _, value in ipairs(get_all_favourite_values()) do
+            if favourite_matches(value, prefix) then
+                local key = value
+                if not seen[key] then
+                    table.insert(matches, { match = value, type = "word" })
+                    seen[key] = true
+                end
+            end
+        end
+
+        return matches
+    end)
+end
+
+if clink.register_match_generator then
+    local function legacy_favourites_match_generator(text, first, last)
+        if type(text) ~= "string" then
+            return false
+        end
+
+        return add_favourite_matches(nil, text)
+    end
+
+    clink.register_match_generator(legacy_favourites_match_generator, 100)
+end
+
+local favourites_suggester = clink.suggester("favourites")
+function favourites_suggester:suggest(line_state, matches)
+    if not line_state then
+        return nil
+    end
+
+    local line = line_state:getline() or ""
+    local cursor = line_state:getcursor() or #line
+    local before_cursor = line:sub(1, cursor)
+    local prefix = before_cursor:match("([^%s]+)$") or ""
+    if prefix == "" then
+        return nil
+    end
+
+    local lower_prefix = prefix:lower()
+    local best_suffix = nil
+    for _, value in ipairs(get_all_favourite_values()) do
+        local lower_value = value:lower()
+        if lower_value:sub(1, #lower_prefix) == lower_prefix then
+            local suffix = value:sub(#prefix + 1)
+            if not best_suffix or #suffix < #best_suffix then
+                best_suffix = suffix
+            end
+        end
+    end
+
+    return best_suffix or nil
+end
+
 local function show_list_by_index(index, rl_buffer)
     local order, lists = list_names_and_values()
     local idx = tonumber(index)
