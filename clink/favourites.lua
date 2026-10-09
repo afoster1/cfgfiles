@@ -29,6 +29,10 @@ local function trim(s)
     return (s or ""):gsub("^%s+", ""):gsub("%s+$", "")
 end
 
+local function make_list_name(index)
+    return "Favourites #" .. tostring(index)
+end
+
 local function list_names_and_values()
     local order = {}
     local lists = {}
@@ -108,10 +112,6 @@ local function get_current_dir()
         dir = os.getenv("CD") or ""
     end
     return dir
-end
-
-local function make_list_name(index)
-    return "Favourites #" .. tostring(index)
 end
 
 local function list_number(name)
